@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load user_tags %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'user-list' %}">Users</a></li>
+  <li class="breadcrumb-item active">{{ user.username }}</li>
+{% endblock breadcrumb %}
+
+{% block content %}
+  <div class="row justify-content-md-center mt-5">
+    <div class="col-8">
+      <dl class="row">
+          <dt class="col-3">Username</dt>
+          <dd class="col-9">{{ user.username }}</dt>
+
+          <dt class="col-3">Birthday</dt>
+          <dd class="col-9">{{ user.date_of_birth }}</dt>
+
+          <dt class="col-3">Elegible</dt>
+          <dd class="col-9">{% is_user_allowed user.date_of_birth %}</dt>
+
+          <dt class="col-3">Random Number</dt>
+          <dd class="col-9">{{ user.random_number }}</dt>
+
+          <dt class="col-3">BizzFuzz</dt>
+          <dd class="col-9">{% fizz_buzz user.random_number %}</dt>
+      </dl>
+    </div>
+  </div>
+{% endblock content %}
