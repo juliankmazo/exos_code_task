@@ -1,6 +1,6 @@
+from datetime import date, timedelta
 from django.test import TestCase, Client
 from .models import User
-from datetime import date, timedelta
 
 
 class UserAppTest(TestCase):
@@ -15,9 +15,9 @@ class UserAppTest(TestCase):
 
         response = self.client.get('/')
 
-        self.assertEqual(response.status_code, 200, '`/users/`route should load')
-        self.assertEqual(len(response.context['user_list']), 2, 'It should load 2 users')
-        self.assertTrue(user_1.username in str(response.content), 'It should render the user_1')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.context['user_list']), 2)
+        self.assertIn(user_1.username, str(response.content))
 
     def test_user_detail_view(self):
         user_1 = User(username='user_1', password='test')
@@ -25,9 +25,9 @@ class UserAppTest(TestCase):
 
         response = self.client.get('/users/1/')
 
-        self.assertEqual(response.status_code, 200, '`user-detail`route should load')
-        self.assertTrue(isinstance(response.context['user'], User), 'It should return a User model')
-        self.assertTrue(user_1.username in str(response.content), 'It should render the user_1')
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(isinstance(response.context['user'], User))
+        self.assertIn(user_1.username, str(response.content))
 
     def test_allowed(self):
         age_gt_13 = date.today() - timedelta(days=(365 * 14))
@@ -36,7 +36,7 @@ class UserAppTest(TestCase):
 
         response = self.client.get('/users/1/')
 
-        self.assertTrue('Allowed' in str(response.content), 'It should render `Allowed` when age > 13')
+        self.assertIn('Allowed', str(response.content))
 
     def test_blocked(self):
         age_lt_13 = date.today() - timedelta(days=(365 * 12))
@@ -45,7 +45,7 @@ class UserAppTest(TestCase):
 
         response = self.client.get('/users/1/')
 
-        self.assertTrue('Blocked' in str(response.content), 'It should render `Blocked` when age < 13')
+        self.assertIn('Blocked', str(response.content))
 
     def test_fizz(self):
         user_1 = User(username='user_1', password='test', random_number=3)
@@ -53,7 +53,7 @@ class UserAppTest(TestCase):
 
         response = self.client.get('/users/1/')
 
-        self.assertTrue('Fizz' in str(response.content), 'It should render `Fizz` when `number % 3 == 0`')
+        self.assertIn('Fizz', str(response.content))
 
     def test_buzz(self):
         user_1 = User(username='user_1', password='test', random_number=5)
@@ -61,4 +61,4 @@ class UserAppTest(TestCase):
 
         response = self.client.get('/users/1/')
 
-        self.assertTrue('Buzz' in str(response.content), 'It should render `Buzz` when `number % 5 == 0`')
+        self.assertIn('Buzz', str(response.content))

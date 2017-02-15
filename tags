@@ -1,0 +1,88 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+0001_initial.py	user/migrations/0001_initial.py	1;"	kind:file	line:1
+ALLOWED_HOSTS	exos_code_task/settings.py	/^ALLOWED_HOSTS = []$/;"	kind:variable	line:28
+AUTH_PASSWORD_VALIDATORS	exos_code_task/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:91
+AUTH_USER_MODEL	exos_code_task/settings.py	/^AUTH_USER_MODEL = 'user.User'$/;"	kind:variable	line:43
+AbstractUser	user/models.py	/^from django.contrib.auth.models import AbstractUser$/;"	kind:namespace	line:2
+AppConfig	user/apps.py	/^from django.apps import AppConfig$/;"	kind:namespace	line:1
+BASE_DIR	exos_code_task/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
+DATABASES	exos_code_task/settings.py	/^DATABASES = {$/;"	kind:variable	line:80
+DEBUG	exos_code_task/settings.py	/^DEBUG = True$/;"	kind:variable	line:26
+INSTALLED_APPS	exos_code_task/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:33
+LANGUAGE_CODE	exos_code_task/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	kind:variable	line:110
+ListView	user/views.py	/^from django.views.generic import ListView$/;"	kind:namespace	line:1
+MIDDLEWARE_CLASSES	exos_code_task/settings.py	/^MIDDLEWARE_CLASSES = [$/;"	kind:variable	line:45
+Migration	user/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:12
+ROOT_URLCONF	exos_code_task/settings.py	/^ROOT_URLCONF = 'exos_code_task.urls'$/;"	kind:variable	line:56
+SECRET_KEY	exos_code_task/settings.py	/^SECRET_KEY = '7s6%km8d%dsp&e+i#+wcoum!j5(2nl05lw3i9k0ws(&@k#g!%q'$/;"	kind:variable	line:23
+STATIC_URL	exos_code_task/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:124
+TEMPLATES	exos_code_task/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:58
+TIME_ZONE	exos_code_task/settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:112
+TestCase	user/tests.py	/^from django.test import TestCase$/;"	kind:namespace	line:1
+USE_I18N	exos_code_task/settings.py	/^USE_I18N = True$/;"	kind:variable	line:114
+USE_L10N	exos_code_task/settings.py	/^USE_L10N = True$/;"	kind:variable	line:116
+USE_TZ	exos_code_task/settings.py	/^USE_TZ = True$/;"	kind:variable	line:118
+User	user/admin.py	/^from .models import User$/;"	kind:namespace	line:3
+User	user/models.py	/^class User(AbstractUser):$/;"	kind:class	line:10
+User	user/views.py	/^from user.models import User$/;"	kind:namespace	line:2
+UserConfig	user/apps.py	/^class UserConfig(AppConfig):$/;"	kind:class	line:4
+UserList	exos_code_task/urls.py	/^from user.views import UserList$/;"	kind:namespace	line:19
+UserList	user/views.py	/^class UserList(ListView):$/;"	kind:class	line:5
+WSGI_APPLICATION	exos_code_task/settings.py	/^WSGI_APPLICATION = 'exos_code_task.wsgi.application'$/;"	kind:variable	line:74
+__init__.py	exos_code_task/__init__.py	1;"	kind:file	line:1
+__init__.py	user/__init__.py	1;"	kind:file	line:1
+__init__.py	user/migrations/__init__.py	1;"	kind:file	line:1
+admin	exos_code_task/urls.py	/^from django.contrib import admin$/;"	kind:namespace	line:18
+admin	user/admin.py	/^from django.contrib import admin$/;"	kind:namespace	line:1
+admin.py	user/admin.py	1;"	kind:file	line:1
+application	exos_code_task/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
+apps.py	user/apps.py	1;"	kind:file	line:1
+auth	user/migrations/0001_initial.py	/^import django.contrib.auth.models$/;"	kind:namespace	line:5
+contrib	user/migrations/0001_initial.py	/^import django.contrib.auth.models$/;"	kind:namespace	line:5
+core	user/migrations/0001_initial.py	/^import django.core.validators$/;"	kind:namespace	line:6
+date_of_birth	user/models.py	/^    date_of_birth = models.DateField(null=True)$/;"	kind:variable	line:14
+dependencies	user/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:16
+django	user/migrations/0001_initial.py	/^import django.contrib.auth.models$/;"	kind:namespace	line:5
+django	user/migrations/0001_initial.py	/^import django.core.validators$/;"	kind:namespace	line:6
+django	user/migrations/0001_initial.py	/^import django.utils.timezone$/;"	kind:namespace	line:8
+execute_from_command_line	manage.py	/^    from django.core.management import execute_from_command_line$/;"	kind:namespace	line:8
+fields	user/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:23
+generate_random_int	user/models.py	/^def generate_random_int():$/;"	kind:function	line:5
+get_wsgi_application	exos_code_task/wsgi.py	/^from django.core.wsgi import get_wsgi_application$/;"	kind:namespace	line:12
+initial	user/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:14
+manage.py	manage.py	1;"	kind:file	line:1
+managers	user/migrations/0001_initial.py	/^            managers=[$/;"	kind:variable	line:45
+migrations	user/migrations/0001_initial.py	/^from django.db import migrations, models$/;"	kind:namespace	line:7
+model	user/views.py	/^    model = User$/;"	kind:variable	line:6
+models	user/migrations/0001_initial.py	/^from django.db import migrations, models$/;"	kind:namespace	line:7
+models	user/migrations/0001_initial.py	/^import django.contrib.auth.models$/;"	kind:namespace	line:5
+models	user/migrations/0001_initial.py	/^import user.models$/;"	kind:namespace	line:9
+models	user/models.py	/^from django.db import models$/;"	kind:namespace	line:1
+models.py	user/models.py	1;"	kind:file	line:1
+name	user/apps.py	/^    name = 'user'$/;"	kind:variable	line:5
+name	user/migrations/0001_initial.py	/^            name='User',$/;"	kind:variable	line:22
+operations	user/migrations/0001_initial.py	/^    operations = [$/;"	kind:variable	line:20
+options	user/migrations/0001_initial.py	/^            options={$/;"	kind:variable	line:40
+os	exos_code_task/settings.py	/^import os$/;"	kind:namespace	line:13
+os	exos_code_task/wsgi.py	/^import os$/;"	kind:namespace	line:10
+os	manage.py	/^import os$/;"	kind:namespace	line:2
+random	user/models.py	/^import random$/;"	kind:namespace	line:3
+random_number	user/models.py	/^    random_number = models.IntegerField(default=generate_random_int)$/;"	kind:variable	line:15
+settings.py	exos_code_task/settings.py	1;"	kind:file	line:1
+sys	manage.py	/^import sys$/;"	kind:namespace	line:3
+tests.py	user/tests.py	1;"	kind:file	line:1
+timezone	user/migrations/0001_initial.py	/^import django.utils.timezone$/;"	kind:namespace	line:8
+unicode_literals	user/migrations/0001_initial.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
+url	exos_code_task/urls.py	/^from django.conf.urls import url$/;"	kind:namespace	line:17
+urlpatterns	exos_code_task/urls.py	/^urlpatterns = [$/;"	kind:variable	line:21
+urls.py	exos_code_task/urls.py	1;"	kind:file	line:1
+user	user/migrations/0001_initial.py	/^import user.models$/;"	kind:namespace	line:9
+utils	user/migrations/0001_initial.py	/^import django.utils.timezone$/;"	kind:namespace	line:8
+validators	user/migrations/0001_initial.py	/^import django.core.validators$/;"	kind:namespace	line:6
+views.py	user/views.py	1;"	kind:file	line:1
+wsgi.py	exos_code_task/wsgi.py	1;"	kind:file	line:1

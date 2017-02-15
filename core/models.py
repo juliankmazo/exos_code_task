@@ -1,10 +1,10 @@
-from django.db import models
-from django.core.urlresolvers import reverse
-from django.contrib.auth.models import AbstractUser
 import random
+from django.contrib.auth.models import AbstractUser
+from django.core.urlresolvers import reverse
+from django.db import models
 
 def generate_random_int():
-    """Returns a random integer between 1 and 100"""
+    """Return a random integer between 1 and 100"""
     return random.randint(1, 100)
 
 

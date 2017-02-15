@@ -94,3 +94,14 @@ In your web-browser, load up the following url
   ```
   http://127.0.0.1:8000/
   ```
+
+## Tests
+To run the tests, you need to run the following command.
+
+Start up the web-server:
+  ```shell
+  $ cd exos_code_task
+  $ python manage.py test
+  ```
+You should get something like:
+![Tests](https://i.imgur.com/U9ruupt.png)
