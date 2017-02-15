@@ -21,7 +21,7 @@ allowed/blocked tag
   - [x] Add a column to the list view after the random number column that uses the
 BizzFuzz tag
 - [x] Unit test what you feel is appropriate to test.
-- [ ] Time permitting, create a download link on the list view that would allow the list to be exported
+- [x] Time permitting, create a download link on the list view that would allow the list to be exported
 to excel.
 
 ## Screenshots

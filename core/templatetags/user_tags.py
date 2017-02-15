@@ -14,13 +14,13 @@ def is_user_allowed(user_birth_date):
 
 
 @register.simple_tag
-def fizz_buzz(random_number):
+def bizz_fuzz(random_number):
     """Calculate the fizzbuzz output"""
     if random_number % 3 == 0 and random_number % 5 == 0:
-        return 'FizzBuzz'
+        return 'BizzFuzz'
     elif random_number % 3 == 0:
-        return 'Fizz'
+        return 'Bizz'
     elif random_number % 5 == 0:
-        return 'Buzz'
+        return 'Fuzz'
     else:
         return random_number
