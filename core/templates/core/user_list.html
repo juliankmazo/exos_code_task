@@ -30,7 +30,7 @@
                 <td>{{ user.date_of_birth }}</td>
                 <td>{% is_user_allowed user.date_of_birth %}</td>
                 <td>{{ user.random_number }}</td>
-                <td>{% fizz_buzz user.random_number %}</td>
+                <td>{% bizz_fuzz user.random_number %}</td>
                 <td><a href="{% url 'user-update' user.id %}" class="btn btn-secondary">Update</a></td>
                 <td><a href="{% url 'user-delete' user.id %}" class="btn btn-danger">-</a></td>
               </tr>
@@ -43,9 +43,12 @@
       {% endif %}
     </div>
   </div>
-  <div class="row">
-    <div class="col">
-      <a href="{% url 'user-create' %}" class="btn btn-success">+</a>
+  <div class="row justify-content-around">
+    <div class="col-5">
+      <a href="{% url 'user-create' %}" class="btn btn-success">+ Add User</a>
+    </div>
+    <div class="col-5 text-right">
+      <a href="{% url 'user-list-csv' %}" class="btn btn-secondary">Export to excel</a>
     </div>
   </div>
 
