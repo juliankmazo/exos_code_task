@@ -1,0 +1,20 @@
+
+{% extends "base.html" %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'user-list' %}">Users</a></li>
+  <li class="breadcrumb-item active">Delete</li>
+  <li class="breadcrumb-item active">{{ user_to_delete.username }}</li>
+{% endblock breadcrumb %}
+
+{% block content %}
+  <div class="row justify-content-md-center mt-5">
+    <div class="col-8">
+      <form action="" method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete {{ user_to_delete.username }}?</p>
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+    </div>
+  </div>
+{% endblock content %}

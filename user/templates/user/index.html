@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load user_tags %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active">Users</li>
+{% endblock breadcrumb %}
+
+{% block content %}
+  <div class="row mt-5">
+    <div class="col">
+      {% if user_list %}
+
+        <table class="table">
+          <thead class="thead-inverse">
+            <tr>
+              <th>Username</th>
+              <th>Birthay</th>
+              <th>Elegible</th>
+              <th>Random Number</th>
+              <th>BizzFuzz</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {% for user in user_list %}
+              <tr>
+                <td><a href="{% url 'user-detail' user.id %}">{{ user.username }}</a></td>
+                <td>{{ user.date_of_birth }}</td>
+                <td>{% is_user_allowed user.date_of_birth %}</td>
+                <td>{{ user.random_number }}</td>
+                <td>{% fizz_buzz user.random_number %}</td>
+                <td><a href="{% url 'user-update' user.id %}" class="btn btn-secondary">Update</a></td>
+                <td><a href="{% url 'user-delete' user.id %}" class="btn btn-danger">-</a></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+      {% else %}
+        <p>No users available.</p>
+      {% endif %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <a href="{% url 'user-create' %}" class="btn btn-success">+</a>
+    </div>
+  </div>
+
+{% endblock content %}

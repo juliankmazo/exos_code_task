@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block breadcrumb %}
+
+  <li class="breadcrumb-item"><a href="{% url 'user-list' %}">Users</a></li>
+  {% if user_to_edit %}
+    <li class="breadcrumb-item active">Edit</li>
+    <li class="breadcrumb-item active">{{ user_to_edit.username }}</li>
+  {% else %}
+    <li class="breadcrumb-item active">New</li>
+  {% endif %}
+{% endblock breadcrumb %}
+
+{% block content %}
+{% if form.errors %}<p class="text-danger"><strong>{{ form.errors }}</strong></p>{% endif %}
+<form action="" class="" method="post">
+  {% csrf_token %}
+  <div class="form-group row">
+    <label for="username" class="col-2 col-form-label">Username</label>
+    <div class="col-10">
+      <input class="form-control" type="text" value="{{ user_to_edit.username }}" id="username" name="username">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="password" class="col-2 col-form-label">Password</label>
+    <div class="col-10">
+      <input class="form-control" type="password" id="password" name="password">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="date-of-birth" class="col-2 col-form-label">Date of birth</label>
+    <div class="col-10">
+      <input class="form-control" type="date" value="{{ user_to_edit.date_of_birth.isoformat }}" id="date-of-birth" name="date_of_birth">
+    </div>
+  </div>
+  <!--{{ form }}-->
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock content %}
